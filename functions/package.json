@@ -1,6 +1,6 @@
 {
   "name": "studio-audience",
-  "description": "CHANGEME",
+  "description": "Ok Google, talk to Evil Laugh",
   "author": "SamVK",
   "scripts": {
     "lint": "eslint .",
