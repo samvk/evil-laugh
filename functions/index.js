@@ -28,7 +28,7 @@ app.intent(['Default Welcome Intent', 'laugh'], (conv) => {
         speech: '<speak></speak>',
         text: 'Ready?',
     }));
-    conv.ask(new SimpleResponse({
+    conv.close(new SimpleResponse({
         speech: `<speak><audio src='https://evil-laugh.firebaseapp.com/audio/laugh-${randomIndex}.mp3' /></speak>`,
         text: laughText,
     }));
