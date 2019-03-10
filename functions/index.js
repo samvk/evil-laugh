@@ -22,13 +22,11 @@ app.intent(['laugh', 'Default Fallback Intent'], (conv) => {
         `MWAHAAHAAhahaha`,
     ]);
 
-    const againText = playAnotherPhrase(region);
-
     conv.ask(new SimpleResponse({
         speech: `<speak><audio src='https://evil-laugh.firebaseapp.com/audio/laugh-${randomIndex}.mp3' /><break time="500ms"/></speak>`,
         text: laughText,
     }));
-    conv.ask(againText);
+    conv.ask(playAnotherPhrase(region));
     conv.ask(new Suggestions([yesPhrase(region), noPhrase(region)]));
 });
 
