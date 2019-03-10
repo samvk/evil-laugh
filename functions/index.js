@@ -9,7 +9,7 @@ const app = dialogflow({ debug: true });
 app.intent(['laugh', 'Default Fallback Intent'], (conv) => {
     const region = conv.user.locale.split('-')[0];
 
-    const randomIndex = randomNumberFromRange(1, 17);
+    const randomIndex = randomNumberFromRange(1, 29);
 
     const laughText = randomPop([
         `HAAHAAHAAHAAHAA`,
@@ -18,6 +18,8 @@ app.intent(['laugh', 'Default Fallback Intent'], (conv) => {
         `Hahahahahahahaha`,
         `HAAHAAHAAHAAhahahaha`,
         `HAHAHAHAHahahaha`,
+        `Muahahahahahaa`,
+        `MWAHAAHAAhahaha`,
     ]);
 
     const againText = playAnotherPhrase(region);
