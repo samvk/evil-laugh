@@ -3,13 +3,15 @@ const functions = require('firebase-functions');
 const { randomPop, randomNumberFromRange } = require('./util');
 const { playAnotherPhrase, yesPhrase, noPhrase } = require('./translation');
 
+const LAUGH_TOTAL_COUNT = 25;
+
 const app = dialogflow({ debug: true });
 
 /** **** DIALOGFLOW ***** */
 app.intent(['laugh', 'Default Fallback Intent'], (conv) => {
     const region = conv.user.locale.split('-')[0];
 
-    const randomIndex = randomNumberFromRange(1, 25);
+    const randomIndex = randomNumberFromRange(1, LAUGH_TOTAL_COUNT);
 
     const laughText = randomPop([
         `HAAHAAHAAHAAHAA`,
